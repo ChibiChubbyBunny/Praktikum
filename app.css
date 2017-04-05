@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+body {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+h1 {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+}
+h2 {
+	font-size: 20px;
+}
+
+body {
+	background-color: pink;
+	margin: 0px;
+	padding: 0px;
+}
+
+button {
+  background-color: purple;
+  color: white;
+  font-size: large;
+  font-weight: bold
+}
+h1 {
+  color: white;
+  background-color: purple;
+  width:10%
+}
+h2 {
+  color: red
+}
+body {
+  margin-left: 20%
+}
+#odgovor {
+  width:100%;
+  color: blue
+}
+

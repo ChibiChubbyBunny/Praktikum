@@ -26,14 +26,22 @@ class Handler(BaseHandler):
             self._set_headers("text/json")
             self.wfile.write(str.encode(str(odgovor)))
     def do_POST(self):
-        ime = self.path
-        prezime = self.command
-        telefon = int(self.headers['Content-Length'])
-        datum ro?enja= int(self.headers['Content-Length'])
-        e-mail = self.rfile.read(duzina_sadrzaja).decode("utf-8")
-        odgovor = {"ime": ime, "prezime": prezime, "telefon": telefon, "datum": datumro?enja, "email": email, "slika": slika}
+        putanja = self.path
+        metod = self.command
+        duzina_sadrzaja = int(self.headers['Content-Length'])
+        sadrzaj = self.rfile.read(duzina_sadrzaja).decode("utf-8")
+        odgovor = {"metod": metod, "putanja": putanja, "sadrzaj": sadrzaj}
         self._set_headers("text/json")
         self.wfile.write(str.encode(str(odgovor)))
+
+        '''ime = self.path
+        prezime = self.command
+        broj = int(self.headers['Content-Length'])
+        datum= int(self.headers['Content-Length'])
+        email = self.rfile.read(duzina_sadrzaja).decode("utf-8")
+        odgovor = {"ime": ime, "prezime": prezime, "broj": broj, "datum": datum, "email": email, "slika": slika}
+        self._set_headers("text/json")
+        self.wfile.write(str.encode(str(odgovor)))'''
 try:
     httpd = http.server.HTTPServer(('',8888), Handler)
     print("Server startovan...port: 8888")

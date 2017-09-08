@@ -42,5 +42,4 @@ function Sacuvaj(e){
 
 function PrikaziOdgovorNaPoruku(odgovor){
   var odgovor2 = JSON.parse(odgovor);
-
-  
+}

@@ -10,7 +10,6 @@ function AjaxZahtev(options, callback) {
   req.open(options.metod, options.putanja, true);
   req.addEventListener("load", function() {
     if (req.status < 400) {
-      console.log(req);
       callback(req.responseText);
     }
     else {
@@ -35,7 +34,7 @@ function SacuvajKontakt(e){
 
   var options = {}
   options.metod = "post";
-  options.putanja  = "http://localhost:8005/noviKontakt";
+  options.putanja  = "noviKontakt";
   var poruka = {"ime":ime, "prezime":prezime, "broj":broj, "email":email, "datum":datum}
   options.sadrzaj = JSON.stringify(poruka); 
   AjaxZahtev(options, PrikaziOdgovorNaPoruku)
